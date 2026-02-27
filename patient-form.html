@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        Name: Your Name
+        Course: MIS 3371
+        Homework 1
+        Description: Patient Registration Form
+    -->
+
+    <meta charset="UTF-8">
+    <title>NovaCare Medical - Patient Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function displayDate() {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("todayDate").innerHTML =
+                today.toLocaleDateString('en-US', options);
+        }
+    </script>
+</head>
+
+<body onload="displayDate()">
+
+    <!-- HEADER SECTION -->
+    <div id="header">
+        <img src="logo.png" alt="Company Logo" width="100">
+        <h1>NovaCare Medical</h1>
+        <p>Today is: <span id="todayDate"></span></p>
+    </div>
+
+    <hr>
+
+    <!-- MAIN FORM SECTION -->
+    <div id="main">
+
+        <h2>Patient Registration Form</h2>
+
+        <form action="thankyou.html">
+
+            <table>
+
+                <!-- NAME ROW -->
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="firstName" maxlength="30" required></td>
+
+                    <td>Middle Initial:</td>
+                    <td><input type="text" name="middleInitial" maxlength="1"></td>
+
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lastName" maxlength="30" required></td>
+                </tr>
+
+                <!-- DOB & SSN -->
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob" required></td>
+
+                    <td>SSN:</td>
+                    <td><input type="password" name="ssn" maxlength="11" required></td>
+                </tr>
+
+                <!-- ADDRESS -->
+                <tr>
+                    <td>Address Line 1:</td>
+                    <td colspan="5"><input type="text" name="address1" maxlength="30" required></td>
+                </tr>
+
+                <tr>
+                    <td>Address Line 2:</td>
+                    <td colspan="5"><input type="text" name="address2" maxlength="30"></td>
+                </tr>
+
+                <!-- CITY STATE ZIP -->
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city" maxlength="30" required></td>
+
+                    <td>State:</td>
+                    <td>
+                        <select name="state" required>
+                            <option value="">Select</option>
+                            <option>AL</option>
+                            <option>AK</option>
+                            <option>AZ</option>
+                            <option>AR</option>
+                            <option>CA</option>
+                            <option>CO</option>
+                            <option>CT</option>
+                            <option>DE</option>
+                            <option>DC</option>
+                            <option>FL</option>
+                            <option>GA</option>
+                            <option>HI</option>
+                            <option>ID</option>
+                            <option>IL</option>
+                            <option>IN</option>
+                            <option>IA</option>
+                            <option>KS</option>
+                            <option>KY</option>
+                            <option>LA</option>
+                            <option>ME</option>
+                            <option>MD</option>
+                            <option>MA</option>
+                            <option>MI</option>
+                            <option>MN</option>
+                            <option>MS</option>
+                            <option>MO</option>
+                            <option>MT</option>
+                            <option>NE</option>
+                            <option>NV</option>
+                            <option>NH</option>
+                            <option>NJ</option>
+                            <option>NM</option>
+                            <option>NY</option>
+                            <option>NC</option>
+                            <option>ND</option>
+                            <option>OH</option>
+                            <option>OK</option>
+                            <option>OR</option>
+                            <option>PA</option>
+                            <option>RI</option>
+                            <option>SC</option>
+                            <option>SD</option>
+                            <option>TN</option>
+                            <option>TX</option>
+                            <option>UT</option>
+                            <option>VT</option>
+                            <option>VA</option>
+                            <option>WA</option>
+                            <option>WV</option>
+                            <option>WI</option>
+                            <option>WY</option>
+                            <option>PR</option>
+                        </select>
+                    </td>
+
+                    <td>Zip Code:</td>
+                    <td><input type="text" name="zip" maxlength="10" required></td>
+                </tr>
+
+                <!-- EMAIL & PHONE -->
+                <tr>
+                    <td>Email:</td>
+                    <td colspan="5"><input type="email" name="email" maxlength="50" required></td>
+                </tr>
+
+                <tr>
+                    <td>Phone:</td>
+                    <td colspan="5"><input type="tel" name="phone" maxlength="15" placeholder="123-456-7890" required></td>
+                </tr>
+
+                <!-- TEXT AREA -->
+                <tr>
+                    <td>Symptoms:</td>
+                    <td colspan="5">
+                        <textarea name="symptoms" rows="3" cols="50"></textarea>
+                    </td>
+                </tr>
+
+                <!-- CHECKBOXES -->
+                <tr>
+                    <td>Medical History:</td>
+                    <td colspan="5">
+                        <input type="checkbox" name="history" value="diabetes"> Diabetes
+                        <input type="checkbox" name="history" value="asthma"> Asthma
+                        <input type="checkbox" name="history" value="heart"> Heart Disease
+                        <input type="checkbox" name="history" value="cancer"> Cancer
+                        <input type="checkbox" name="history" value="none"> None
+                    </td>
+                </tr>
+
+                <!-- RADIO BUTTONS -->
+                <tr>
+                    <td>Gender:</td>
+                    <td colspan="5">
+                        <input type="radio" name="gender" value="male" required> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="other"> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vaccinated:</td>
+                     <td colspan="5">
+                        <input type="radio" name="vaccinated" value="yes" required> Yes
+                        <input type="radio" name="vaccinated" value="no"> No
+                    </td>
+                </tr>
+
+<tr>
+    <td>Insurance:</td>
+    <td colspan="5">
+        <input type="radio" name="insurance" value="yes" required> Yes
+        <input type="radio" name="insurance" value="no"> No
+    </td>
+</tr>    
+                <!-- SLIDER -->
+                <tr>
+                    <td>Health Rating (1-10):</td>
+                    <td colspan="5">
+                        <input type="range" name="health" min="1" max="10">
+                    </td>
+                </tr>
+
+                <!-- LOGIN -->
+                <tr>
+                    <td>User ID:</td>
+                    <td colspan="5">
+                        <input type="text" name="userid" maxlength="20" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td colspan="5">
+                        <input type="password" name="password" maxlength="30" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Re-enter Password:</td>
+                    <td colspan="5">
+                        <input type="password" name="repassword" maxlength="30" required>
+                    </td>
+                </tr>
+
+                <!-- BUTTONS -->
+                <tr>
+                    <td colspan="6" align="center">
+                        <input type="reset" value="CLEAR AND START OVER">
+                        <input type="submit" value="SUBMIT">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>Contact Us</p>
+        <p>PO Box 18881, Sugar Land TX 77496</p>
+        <a href="#">Social Media</a>
+    </div>
+
+    <!-- END OF PAGE COMMENT -->
+</body>
+
+</html>

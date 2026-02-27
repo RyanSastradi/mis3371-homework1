@@ -1,0 +1,64 @@
+/* 
+Name: Ryan Sastradi
+Course: MIS 3371
+Homework 1
+Description: Styles for Patient Registration Form
+*/
+
+body {
+    background-color: #e6f2f7;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#header {
+    background-color: #0a4d78;
+    color: white;
+    padding: 20px;
+}
+
+#header h1 {
+    margin: 5px 0;
+}
+
+#main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 8px;
+}
+
+input, textarea, select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #888;
+}
+
+input[type="submit"] {
+    background-color: #0a4d78;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#footer {
+    background-color: #0a4d78;
+    color: white;
+    padding: 15px;
+}
